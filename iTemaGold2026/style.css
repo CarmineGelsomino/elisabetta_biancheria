@@ -1,0 +1,116 @@
+/*
+Theme Name: iTemaGold2026
+Theme URI: https://oc-corporation.example/temi/itemagold2026
+Author: OC Corporation
+Author URI: https://oc-corporation.example
+Description: Tema WooCommerce by OC Corporation ottimizzato per accessibilità, SEO, GEO, sicurezza e standard WordPress 2026.
+Version: 1.1.0
+Requires at least: 6.6
+Tested up to: 6.7
+Requires PHP: 8.2
+Text Domain: itemagold2026
+Domain Path: /languages
+Tags: e-commerce, accessibility-ready, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+:root {
+  --itg-color-bg: #ffffff;
+  --itg-color-text: #111827;
+  --itg-color-primary: #b8860b;
+  --itg-color-primary-contrast: #0f172a;
+  --itg-focus-ring: #1d4ed8;
+  --itg-font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --itg-spacing: 1rem;
+  --itg-max-width: 80rem;
+  --itg-content-width: 75ch;
+  --itg-button-radius: 0.375rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--itg-font-family);
+  line-height: 1.6;
+  color: var(--itg-color-text);
+  background-color: var(--itg-color-bg);
+}
+
+a {
+  color: var(--itg-color-primary-contrast);
+  text-underline-offset: 0.15em;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--itg-focus-ring);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  padding: 0.5rem;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+}
+
+.site-container {
+  width: min(100% - 2rem, var(--itg-max-width));
+  margin-inline: auto;
+}
+
+.site-header,
+.site-footer {
+  padding: var(--itg-spacing) 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.site-footer {
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 0;
+  margin-top: 2rem;
+}
+
+.main-navigation ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.woocommerce a.button,
+.woocommerce button.button,
+button,
+input[type="submit"] {
+  background-color: var(--itg-color-primary);
+  color: var(--itg-color-primary-contrast);
+  border: 0;
+  padding: 0.6rem 0.95rem;
+  border-radius: var(--itg-button-radius);
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

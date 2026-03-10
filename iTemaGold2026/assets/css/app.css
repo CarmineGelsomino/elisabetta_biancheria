@@ -1,0 +1,17 @@
+/* Stili aggiuntivi ottimizzati per leggibilità e performance. */
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+p,
+li {
+  max-width: var(--itg-content-width);
+}
+
+.woocommerce ul.products li.product a img {
+  border-radius: 0.5rem;
+}
